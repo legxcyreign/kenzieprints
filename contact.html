@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | KenziePrints - Created For You</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<main class="legal-page contact-page">
+
+  <h1>Contact Us</h1>
+
+  <p>
+    We'd love to hear from you. If you have questions about an order,
+    shipping, products, activity kits, stickers, name labels, or anything else,
+    please send us a message.
+  </p>
+
+  <form
+  class="contact-form"
+  action="https://formspree.io/f/mykalnyy"
+  method="POST"
+>
+
+  <input
+    type="hidden"
+    name="_next"
+    value="https://kenzieprints.com/thank-you.html"
+  >
+
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Order Number <span class="optional-text">(Optional)</span>
+      <input type="text" name="order_number">
+    </label>
+
+    <label>
+      Subject
+      <input type="text" name="subject" required>
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <button type="submit" class="btn primary">
+      Send Message
+    </button>
+
+  </form>
+
+  <p class="contact-support-note">
+  You can also email us directly at
+  hello@kenzieprints.com.
+</p>
+
+  <a href="index.html" class="btn secondary">
+    Back to Home
+  </a>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
