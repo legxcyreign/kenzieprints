@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | KenziePrints - Created For You</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-bar">
+  <div class="logo">KenziePrints - Created For You</div>
+  <nav>
+    <a href="index.html#shop">Shop</a>
+    <a href="index.html#cart" id="cart-link" class="cart-link">
+      <span class="cart-text">Cart</span>
+      <span class="cart-count-badge">0</span>
+    </a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#social">Social</a>
+  </nav>
+</header>
+
+<section class="summary-page">
+  <div class="summary-wrap">
+
+    <div class="summary-header">
+      <h1>Checkout</h1>
+      <p>Enter your details below to continue your order 💖</p>
+    </div>
+
+    <div class="payment-layout">
+
+      <!-- LEFT SIDE -->
+      <div class="payment-form-wrap">
+
+        <div class="payment-section-card">
+          <h2>Contact Information</h2>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-email">Email Address</label>
+              <input type="email" id="checkout-email" placeholder="you@example.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-section-card">
+          <h2>Shipping Address</h2>
+
+          <div class="payment-form-grid two-col">
+            <div class="payment-field">
+              <label for="checkout-first-name">First Name</label>
+              <input type="text" id="checkout-first-name" placeholder="First name">
+            </div>
+
+            <div class="payment-field">
+              <label for="checkout-last-name">Last Name</label>
+              <input type="text" id="checkout-last-name" placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-address">Street Address</label>
+              <input type="text" id="checkout-address" placeholder="Street address">
+            </div>
+          </div>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-address-2">Apartment, Suite, etc. <span class="payment-optional">(optional)</span></label>
+              <input type="text" id="checkout-address-2" placeholder="Apartment, suite, unit, etc.">
+            </div>
+          </div>
+
+          <div class="payment-form-grid three-col">
+            <div class="payment-field">
+              <label for="checkout-city">City</label>
+              <input type="text" id="checkout-city" placeholder="City">
+            </div>
+
+            <div class="payment-field">
+              <label for="checkout-state">State</label>
+              <input type="text" id="checkout-state" placeholder="State">
+            </div>
+
+            <div class="payment-field">
+              <label for="checkout-zip">ZIP Code</label>
+              <input type="text" id="checkout-zip" placeholder="ZIP">
+            </div>
+          </div>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-phone">Phone Number</label>
+              <input type="tel" id="checkout-phone" placeholder="Phone number">
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-section-card">
+          <h2>Payment Method</h2>
+
+          <div class="payment-method-box">
+            <div class="payment-method-title">Card Payment</div>
+            <p class="payment-method-note">
+              This checkout layout is ready for a future live payment setup. Real card processing will be connected when your store goes live.
+            </p>
+          </div>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-card-name">Name on Card</label>
+              <input type="text" id="checkout-card-name" placeholder="Name on card">
+            </div>
+          </div>
+
+          <div class="payment-form-grid single">
+            <div class="payment-field">
+              <label for="checkout-card-number">Card Number</label>
+              <input type="text" id="checkout-card-number" placeholder="1234 5678 9012 3456">
+            </div>
+          </div>
+
+          <div class="payment-form-grid two-col">
+            <div class="payment-field">
+              <label for="checkout-expiry">Expiration Date</label>
+              <input type="text" id="checkout-expiry" placeholder="MM/YY">
+            </div>
+
+            <div class="payment-field">
+              <label for="checkout-cvc">Security Code</label>
+              <input type="text" id="checkout-cvc" placeholder="CVC">
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-section-card">
+          <h2>Billing Address</h2>
+
+          <div class="payment-checkbox-wrap">
+            <label class="payment-checkbox-label">
+              <input type="checkbox" checked>
+              <span>Billing address is the same as shipping address</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="payment-action-box">
+          <button class="btn primary payment-submit-btn" type="button">
+            Complete Order
+          </button>
+
+          <p class="payment-submit-note">
+            This is a polished checkout layout. Live payment processing will be connected when you’re ready.
+          </p>
+
+          <a href="order-summary.html" class="btn ghost payment-back-link">← Back to Order Summary</a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="payment-summary-wrap">
+        <div class="summary-box payment-summary-box">
+          <h3>Your Order</h3>
+
+          <div id="payment-summary-items" class="summary-items">
+            <!-- JS injects items -->
+          </div>
+
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="payment-subtotal">$0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Bundle Discount</span>
+            <span id="payment-discount">-$0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Shipping</span>
+            <span id="payment-shipping">$0.00</span>
+          </div>
+
+          <div class="summary-line">
+            <span>Tax</span>
+            <span id="payment-tax">Estimated at checkout</span>
+          </div>
+
+          <div class="summary-total">
+            <span>Estimated Total</span>
+            <span id="payment-total">$0.00</span>
+          </div>
+
+          <p id="payment-free-shipping-message" class="free-shipping-message"></p>
+
+          <p class="summary-note">
+            Final tax will be calculated at checkout for your location 💕
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Kenzie Prints LLC</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

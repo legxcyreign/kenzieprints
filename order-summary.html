@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Summary | KenziePrints - Created For You</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="home-top-message">
+  <div class="home-top-inner">
+    <div class="home-social-quick">
+      <a href="https://www.instagram.com/kenzieprints_llc" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@kenzieprints_llc" target="_blank">TikTok</a>
+      <a href="mailto:hello@kenzieprints.com">hello@kenzieprints.com</a>
+    </div>
+
+    <p class="home-brand-message">
+      <span>Custom Kids Print Designs</span>
+      <span>Made With Love For Little Learners</span>
+      <span>Helping Kids Learn, Express &amp; Grow</span>
+    </p>
+  </div>
+</div>
+
+<header class="home-header">
+  <a href="index.html" class="home-logo">
+    <img src="assets/kenzieprints-logo.png" alt="KenziePrints Created For You" class="home-logo-image">
+  </a>
+
+  <nav class="home-nav">
+  <a href="index.html">Home</a>
+  <a href="stickers.html">Our Sticker Collection</a>
+  <a href="learning.html">Our Learning Cards</a>
+
+  <a href="#" id="cart-link" class="cart-link">
+    <span class="cart-text">Cart</span>
+    <span class="cart-count-badge">0</span>
+  </a>
+</nav>
+</header>
+
+<section class="summary-page">
+  <div class="summary-wrap">
+
+    <div class="summary-header">
+      <h1>Order Summary</h1>
+      <p>Review your items and customizations before secure checkout 💖</p>
+    </div>
+
+    <div class="summary-grid">
+      <div id="summary-items" class="summary-items">
+        <!-- JS injects items -->
+      </div>
+
+      <div class="summary-box">
+        <h3>Order Summary</h3>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">$0.00</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Shipping</span>
+          <span id="summary-shipping">Calculated at checkout</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Tax</span>
+          <span id="summary-tax">Calculated at checkout</span>
+        </div>
+
+        <div class="summary-total">
+          <span>Items Total</span>
+          <span id="summary-total">$0.00</span>
+        </div>
+
+        <button class="shopify-checkout-btn" onclick="checkoutLocalCartWithShopify()">
+          Continue to Secure Checkout
+        </button>
+
+        <p class="shopify-secure-note">
+          🔒 Secure checkout powered by Shopify
+        </p>
+
+        <p class="shopify-checkout-note">
+          Payments, shipping, and tax are completed securely through Shopify.
+        </p>
+
+        <div class="checkout-policy-links">
+          <a href="shipping.html">Shipping Policy</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+
+        <p class="summary-note">
+          Final shipping and tax will be calculated at checkout for your location 💕
+        </p>
+
+        <a href="index.html" class="btn ghost">Continue Shopping</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="home-footer" id="footer">
+  <div class="home-footer-grid">
+
+    <div>
+      <h3>KenziePrints</h3>
+      <p>
+        Handmade For Growing Minds — thoughtful kids print designs made for learning,
+        gifting, expression, and everyday joy.
+      </p>
+    </div>
+
+    <div>
+  <h4>Shop</h4>
+  <a href="learning.html">Our Learning Cards</a>
+  <a href="stickers.html">Our Sticker Collection</a>
+</div>
+
+    <div>
+      <h4>Help</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="shipping.html">Shipping Policy</a>
+      <a href="legal-notice.html">Legal Notice</a>
+      <a href="subscription-policy.html">Subscription Policy</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div>
+      <h4>Stay Connected</h4>
+      <a href="https://www.instagram.com/kenzieprints_llc" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@kenzieprints_llc" target="_blank">TikTok</a>
+      <a href="mailto:hello@kenzieprints.com">hello@kenzieprints.com</a>
+    </div>
+
+  </div>
+
+  <div class="home-footer-bottom">
+    <p>© 2026 KenziePrints LLC</p>
+    <p>Created For You</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
