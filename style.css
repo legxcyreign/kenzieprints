@@ -4308,31 +4308,6 @@ body {
   overflow: hidden;
 }
 
-.home-story-card::after {
-  position: absolute;
-  top: 20px;
-  right: 26px;
-  font-size: 3.4rem;
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-.home-story-row:nth-child(1) .home-story-card::after {
-  content: "🎁";
-}
-
-.home-story-row:nth-child(2) .home-story-card::after {
-  content: "👜";
-}
-
-.home-story-row:nth-child(3) .home-story-card::after {
-  content: "✨";
-}
-
-.home-story-row:nth-child(4) .home-story-card::after {
-  content: "🌱";
-}
-
 /* STOP HEADER FROM FOLLOWING SCROLL */
 .home-header {
   position: relative !important;
