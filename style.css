@@ -8376,3 +8376,67 @@ img {
 
 }
 
+/* =========================
+   MOBILE HEADER COMPACT FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .home-top-message {
+    padding: 14px 12px 10px !important;
+    min-height: 0 !important;
+  }
+
+  .home-top-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .home-social-quick {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 24px !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .home-social-quick a {
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+  }
+
+  .home-brand-message {
+    display: none !important;
+  }
+
+  .home-header {
+    margin-top: 0 !important;
+    padding-top: 14px !important;
+    padding-bottom: 20px !important;
+    border-top: 1px solid rgba(216, 137, 156, 0.22) !important;
+  }
+
+  .home-logo {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .home-logo-image {
+    width: min(82vw, 430px) !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .home-nav {
+    margin-top: 8px !important;
+    gap: 12px !important;
+  }
+
+}
