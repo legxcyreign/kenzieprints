@@ -8441,18 +8441,28 @@ img {
 
 }
 
-/* MOBILE - MAKE KENZIEPRINTS HERO WORDMARK LARGER */
+/* MOBILE - LARGE + PERFECTLY CENTERED HERO ART */
 @media (max-width: 768px) {
 
   .home-hero-wordmark {
     width: 100% !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    overflow: visible !important;
+    text-align: center !important;
   }
 
   .home-hero-wordmark img {
-    width: 115% !important;
+    width: 145% !important;
     max-width: none !important;
-    margin-left: -7.5% !important;
     height: auto !important;
+
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    display: block !important;
   }
 
 }
