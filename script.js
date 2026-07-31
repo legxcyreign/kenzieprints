@@ -734,11 +734,11 @@ document.addEventListener("click", (e) => {
 });
 
 /* =========================
-   SHOPIFY CONFIG — TEST ONLY
+   SHOPIFY CONFIG
 ========================= */
 
-const SHOPIFY_STORE_URL = "kenzieprints-mlhtwcyt.myshopify.com";
-const SHOPIFY_STOREFRONT_TOKEN = "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";
+const SHOPIFY_STORE_URL = "kenzieprints-2.myshopify.com";
+const SHOPIFY_STOREFRONT_TOKEN = "eed1982207523f90434303da87f8e403"; 
 
 /* =========================
    SHOPIFY TEST — LOAD PRODUCT
@@ -782,7 +782,7 @@ async function testShopifyProduct() {
         method: "POST",
         headers: {
   "Content-Type": "application/json",
-  "Shopify-Storefront-Private-Token": SHOPIFY_STOREFRONT_TOKEN
+  "X-Shopify-Storefront-Access-Token": SHOPIFY_STOREFRONT_TOKEN
 },
         body: JSON.stringify({
           query,
@@ -833,7 +833,7 @@ async function shopifyFetch(query, variables = {}) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Shopify-Storefront-Private-Token": SHOPIFY_STOREFRONT_TOKEN
+        "X-Shopify-Storefront-Access-Token": SHOPIFY_STOREFRONT_TOKEN
       },
       body: JSON.stringify({ query, variables })
     }
@@ -2125,13 +2125,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!helpBox) return;
 
     const alreadyExists = helpBox.querySelector(
-      'a[href="https://kenzieprints-mlhtwcyt.myshopify.com/account/orders"]'
+      'a[href="https://kenzieprints-2.myshopify.com/account/orders"]'
     );
 
     if (alreadyExists) return;
 
     const returnLink = document.createElement("a");
-    returnLink.href = "https://kenzieprints-mlhtwcyt.myshopify.com/account/orders";
+    returnLink.href = "https://kenzieprints-2.myshopify.com/account/orders";
     returnLink.target = "_blank";
     returnLink.rel = "noopener";
     returnLink.textContent = "Returns & Cancellations";
