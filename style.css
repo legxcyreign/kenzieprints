@@ -5740,6 +5740,14 @@ body {
   margin-top: 16px;
 }
 
+.ocean-stickers-product-page .product-pair-mini a {
+  grid-column: 1 / -1;
+}
+
+.ocean-product-page .product-pair-mini a {
+  grid-column: 1 / -1;
+}
+
 .product-pair-mini a {
   text-decoration: none;
   color: #3f2824;
@@ -5864,7 +5872,8 @@ body {
 .alphabet-product-page .product-thumbnail-grid,
 .numbers-product-page .product-thumbnail-grid,
 .affirmation-product-page .product-thumbnail-grid,
-.communication-product-page .product-thumbnail-grid {
+.communication-product-page .product-thumbnail-grid,
+.ocean-product-page .product-thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(82px, 92px));
   gap: 12px;
@@ -5874,7 +5883,8 @@ body {
 .alphabet-product-page .product-thumb-btn,
 .numbers-product-page .product-thumb-btn,
 .affirmation-product-page .product-thumb-btn,
-.communication-product-page .product-thumb-btn {
+.communication-product-page .product-thumb-btn,
+.ocean-product-page .product-thumb-btn {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 14px;
@@ -5885,7 +5895,8 @@ body {
 .alphabet-product-page .product-thumb-btn img,
 .numbers-product-page .product-thumb-btn img,
 .affirmation-product-page .product-thumb-btn img,
-.communication-product-page .product-thumb-btn img {
+.communication-product-page .product-thumb-btn img,
+.ocean-product-page .product-thumb-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -5906,7 +5917,8 @@ body {
 
 .alphabet-product-page .product-thumbnail-grid,
 .numbers-product-page .product-thumbnail-grid,
-.affirmation-product-page .product-thumbnail-grid {
+.affirmation-product-page .product-thumbnail-grid,
+.ocean-product-page .product-thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(82px, 92px));
   gap: 12px;
@@ -5915,7 +5927,8 @@ body {
 
 .alphabet-product-page .product-thumb-btn,
 .numbers-product-page .product-thumb-btn,
-.affirmation-product-page .product-thumb-btn {
+.affirmation-product-page .product-thumb-btn,
+.ocean-product-page .product-thumb-btn {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 14px;
@@ -5925,7 +5938,8 @@ body {
 
 .alphabet-product-page .product-thumb-btn img,
 .numbers-product-page .product-thumb-btn img,
-.affirmation-product-page .product-thumb-btn img {
+.affirmation-product-page .product-thumb-btn img,
+.ocean-product-page .product-thumb-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -5933,13 +5947,15 @@ body {
 
 .alphabet-product-page .product-main-image-wrap,
 .numbers-product-page .product-main-image-wrap,
-.affirmation-product-page .product-main-image-wrap {
+.affirmation-product-page .product-main-image-wrap,
+.ocean-product-page .product-main-image-wrap {
   height: 500px;
 }
 
 .alphabet-product-page .product-gallery-card,
 .numbers-product-page .product-gallery-card,
-.affirmation-product-page .product-gallery-card {
+.affirmation-product-page .product-gallery-card,
+.ocean-product-page .product-gallery-card {
   align-self: start;
 }
 
