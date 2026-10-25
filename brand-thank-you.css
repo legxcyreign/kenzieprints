@@ -1,0 +1,208 @@
+
+/* =========================================
+   KENZIEPRINTS — BRAND THANK-YOU PAGE
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #faf7f1;
+  color: #655c55;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* HEADER */
+
+.thank-you-header {
+  padding: 26px 7%;
+  border-bottom: 1px solid #e8dfd6;
+}
+
+.thank-you-logo {
+  color: #788a75;
+  font-size: 29px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.thank-you-logo:hover {
+  color: #607b60;
+}
+
+/* MAIN CONTENT */
+
+.thank-you-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 20px;
+}
+
+/* CONFIRMATION CARD */
+
+.thank-you-card {
+  width: 100%;
+  max-width: 680px;
+  padding: 60px 55px;
+  border: 1px solid #e8ded5;
+  border-radius: 24px;
+  background: #f2ebe5;
+  text-align: center;
+}
+
+/* CHECKMARK */
+
+.thank-you-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: #e2e9df;
+  color: #607b60;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+}
+
+/* TEXT */
+
+.thank-you-eyebrow {
+  margin: 0 0 16px;
+  color: #899b83;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.thank-you-card h1 {
+  margin: 0 0 22px;
+  color: #806d65;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.thank-you-message {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.thank-you-description {
+  max-width: 460px;
+  margin: 0 auto 32px;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* SIGNATURE MESSAGE */
+
+.thank-you-quote {
+  margin: 0 auto 35px;
+  padding: 24px;
+  border-radius: 14px;
+  background: #faf7f1;
+  color: #806d65;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* RETURN HOME BUTTON */
+
+.thank-you-home {
+  display: inline-block;
+  padding: 16px 30px;
+  border-radius: 30px;
+  background: #788a75;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.thank-you-home:hover {
+  background: #607b60;
+  transform: translateY(-2px);
+}
+
+.thank-you-home:focus-visible {
+  outline: 3px solid #607b60;
+  outline-offset: 4px;
+}
+
+/* FOOTER */
+
+.thank-you-footer {
+  padding: 26px 20px;
+  border-top: 1px solid #e8dfd6;
+  color: #96867d;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .thank-you-header {
+    padding: 20px 6%;
+  }
+
+  .thank-you-logo {
+    font-size: 24px;
+  }
+
+  .thank-you-main {
+    padding: 35px 16px;
+  }
+
+  .thank-you-card {
+    padding: 42px 22px;
+    border-radius: 18px;
+  }
+
+  .thank-you-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+  }
+
+  .thank-you-message {
+    font-size: 17px;
+  }
+
+  .thank-you-description {
+    font-size: 16px;
+  }
+
+  .thank-you-quote {
+    padding: 20px 15px;
+    font-size: 16px;
+  }
+
+  .thank-you-home {
+    width: 100%;
+    padding: 16px 18px;
+  }
+
+}

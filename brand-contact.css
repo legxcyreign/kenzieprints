@@ -1,0 +1,268 @@
+
+/* =========================================
+   KENZIEPRINTS — BRAND CONTACT PAGE
+   Desktop + Mobile
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body.brand-contact-page {
+  margin: 0;
+  min-height: 100vh;
+  background: #faf7f1;
+  color: #655c55;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+.brand-contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 7%;
+  border-bottom: 1px solid #e8dfd6;
+}
+
+.brand-contact-logo {
+  color: #788a75;
+  font-size: 29px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.brand-contact-home {
+  color: #927b76;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.brand-contact-home:hover,
+.brand-contact-logo:hover {
+  color: #607b60;
+}
+
+/* MAIN */
+
+.brand-contact-main {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 70px 0 90px;
+}
+
+/* INTRO */
+
+.brand-contact-intro {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.brand-contact-eyebrow {
+  margin: 0 0 16px;
+  color: #899b83;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.brand-contact-intro h1 {
+  margin: 0 0 20px;
+  color: #806d65;
+  font-size: clamp(38px, 6vw, 56px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.brand-contact-intro > p:last-child {
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* CONTACT CARD */
+
+.brand-contact-card {
+  padding: 50px 55px;
+  border: 1px solid #e8ded5;
+  border-radius: 22px;
+  background: #f2ebe5;
+}
+
+.brand-contact-card h2 {
+  margin: 0 0 32px;
+  color: #92716f;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* FORM */
+
+.brand-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.brand-contact-form label {
+  color: #77685e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.brand-contact-form input,
+.brand-contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 13px;
+  border: 1px solid #d9cfc5;
+  border-radius: 10px;
+  background: #fffdf9;
+  color: #655c55;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.brand-contact-form textarea {
+  resize: vertical;
+  min-height: 145px;
+}
+
+.brand-contact-form input:focus,
+.brand-contact-form textarea:focus {
+  border-color: #899b83;
+  box-shadow: 0 0 0 3px rgba(137, 155, 131, 0.15);
+}
+
+/* SEND BUTTON */
+
+.brand-contact-form button {
+  align-self: center;
+  min-width: 210px;
+  margin-top: 15px;
+  padding: 16px 28px;
+  border: 0;
+  border-radius: 30px;
+  background: #788a75;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.brand-contact-form button:hover {
+  background: #607b60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(80, 100, 75, 0.18);
+}
+
+.brand-contact-form button:focus-visible {
+  outline: 3px solid #607b60;
+  outline-offset: 4px;
+}
+
+/* DIRECT EMAIL */
+
+.brand-contact-direct {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.brand-contact-direct p {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.brand-contact-direct a {
+  color: #788a75;
+  font-size: 19px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.brand-contact-direct a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.brand-contact-footer {
+  padding: 26px 20px;
+  border-top: 1px solid #e8dfd6;
+  color: #96867d;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .brand-contact-header {
+    padding: 20px 6%;
+  }
+
+  .brand-contact-logo {
+    font-size: 24px;
+  }
+
+  .brand-contact-home {
+    font-size: 11px;
+  }
+
+  .brand-contact-main {
+    width: min(100% - 32px, 760px);
+    padding: 50px 0 65px;
+  }
+
+  .brand-contact-intro {
+    margin-bottom: 35px;
+  }
+
+  .brand-contact-intro > p:last-child {
+    font-size: 16px;
+  }
+
+  .brand-contact-card {
+    padding: 35px 22px;
+    border-radius: 18px;
+  }
+
+  .brand-contact-card h2 {
+    font-size: 26px;
+  }
+
+  .brand-contact-form button {
+    width: 100%;
+  }
+
+  .brand-contact-direct {
+    margin-top: 40px;
+  }
+
+}

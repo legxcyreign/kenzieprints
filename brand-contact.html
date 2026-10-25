@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact KenziePrints</title>
+
+  <meta name="description"
+        content="Get in touch with KenziePrints for questions, orders, collaborations, and more.">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="brand-contact.css">
+</head>
+
+<body class="brand-contact-page">
+
+  <header class="brand-contact-header">
+    <a href="index.html" class="brand-contact-logo">
+      KenziePrints
+    </a>
+
+    <a href="index.html" class="brand-contact-home">
+      ← HOME
+    </a>
+  </header>
+
+  <main class="brand-contact-main">
+
+    <section class="brand-contact-intro">
+      <p class="brand-contact-eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+
+      <h1>Let's Connect</h1>
+
+      <p>
+        Have a question, a special request, or simply want to say hello?
+        We'd love to hear from you.
+      </p>
+    </section>
+
+    <section class="brand-contact-card">
+
+      <h2>Send Us a Message</h2>
+
+      <form
+        class="brand-contact-form"
+        action="https://formspree.io/f/xvkkzobw"
+        method="POST"
+      >
+
+        <label for="brand-name">Your Name</label>
+        <input id="brand-name" type="text" name="name" required>
+
+        <label for="brand-email">Email Address</label>
+        <input id="brand-email" type="email" name="email" required>
+
+        <label for="brand-subject">Subject</label>
+        <input id="brand-subject" type="text" name="subject" required>
+
+        <label for="brand-message">Your Message</label>
+        <textarea
+          id="brand-message"
+          name="message"
+          rows="6"
+          required
+        ></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+
+      </form>
+
+    </section>
+
+    <section class="brand-contact-direct">
+      <p>Prefer email? Reach us directly at</p>
+
+      <a href="mailto:hello@kenzieprints.com">
+        hello@kenzieprints.com
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="brand-contact-footer">
+    <p>KenziePrints — Created With Purpose &amp; Imagination</p>
+  </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector(".brand-contact-form");
+
+  if (!form) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  const statusMessage = document.createElement("p");
+  statusMessage.setAttribute("role", "status");
+  statusMessage.setAttribute("aria-live", "polite");
+  statusMessage.style.textAlign = "center";
+  statusMessage.style.marginTop = "15px";
+
+  form.appendChild(statusMessage);
+
+  form.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "SENDING...";
+    statusMessage.textContent = "";
+
+    try {
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      window.location.assign("brand-thank-you.html");
+
+    } catch (error) {
+
+      statusMessage.textContent =
+        "We couldn't send your message. Please try again.";
+
+      statusMessage.style.color = "#a34d4d";
+
+      submitButton.disabled = false;
+      submitButton.textContent = "SEND MESSAGE";
+
+    }
+
+  });
+
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,822 @@
+
+/* =========================================
+   KENZIEPRINTS — WELCOME HOMEPAGE
+   Independent stylesheet
+   ========================================= */
+
+:root {
+  --welcome-cream: #f8f4eb;
+  --welcome-sage: #a9b8a0;
+  --welcome-sage-dark: #62765d;
+  --welcome-rose: #b98d8b;
+  --welcome-taupe: #a58c7e;
+  --welcome-text: #675b50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.welcome-page {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--welcome-cream);
+  color: var(--welcome-text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.welcome-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-header {
+  position: relative;
+  z-index: 10;
+}
+
+.welcome-hero {
+  position: relative;
+  width: 100%;
+  background: var(--welcome-cream);
+}
+
+.welcome-hero-artwork {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.welcome-showcase {
+  position: relative;
+  padding: 70px 24px;
+  background: var(--welcome-cream);
+}
+
+.welcome-footer {
+  padding: 35px 24px;
+  background: #e8e9dc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .welcome-showcase {
+    padding: 45px 18px;
+  }
+}
+
+
+/* =========================================
+   WELCOME PRODUCT SHOWCASE
+   ========================================= */
+
+.welcome-showcase {
+  background: var(--welcome-cream);
+  padding: 46px 24px 75px;
+  text-align: center;
+}
+
+.welcome-showcase-inner {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.welcome-showcase-kicker {
+  margin: 0 0 12px;
+  color: var(--welcome-sage-dark);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.welcome-showcase h2 {
+  margin: 0;
+  color: var(--welcome-text);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.welcome-showcase-description {
+  margin: 14px 0 34px;
+  color: #8b7e72;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.welcome-slideshow {
+  width: 100%;
+  overflow: hidden;
+}
+
+.welcome-slideshow-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.welcome-product-slide {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e7e0d5;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 8px 28px rgba(90, 78, 65, 0.07);
+}
+
+.welcome-product-slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.welcome-slideshow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.welcome-slideshow-controls button {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #cbd3c4;
+  border-radius: 50%;
+  background: #fffdf9;
+  color: var(--welcome-sage-dark);
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.welcome-slideshow-controls button:hover {
+  background: #e8eee3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(90, 78, 65, 0.1);
+}
+
+.welcome-slideshow-controls button:focus-visible {
+  outline: 3px solid var(--welcome-sage-dark);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .welcome-showcase {
+    padding: 34px 16px 55px;
+  }
+
+  .welcome-slideshow-track {
+    gap: 10px;
+  }
+
+  .welcome-product-slide {
+    padding: 7px;
+    border-radius: 12px;
+  }
+
+  .welcome-showcase-description {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .welcome-slideshow-track {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .welcome-product-slide {
+    padding: 12px;
+  }
+}
+
+
+/* Elegant showcase heading */
+
+.welcome-showcase h2 {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 38px;
+  padding-bottom: 18px;
+  color: #77685e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 3vw, 39px);
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.welcome-showcase h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 74px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #9eaf96,
+    transparent
+  );
+}
+
+
+/* =========================================
+   SLIDESHOW — ONE ROW OF THREE
+   ========================================= */
+
+.welcome-slideshow-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.welcome-product-slide {
+  display: none;
+}
+
+.welcome-product-slide.is-active {
+  display: block;
+}
+
+.welcome-product-slide.is-active {
+  animation: welcomeSlideFade 0.8s ease both;
+}
+
+@keyframes welcomeSlideFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-product-slide.is-active {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-slideshow-track {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .welcome-slideshow-track {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================
+   KENZIEPRINTS — SMOOTH SLIDING CAROUSEL
+   ========================================= */
+
+.welcome-slideshow {
+  width: 100%;
+  overflow: hidden;
+}
+
+.welcome-slideshow-track {
+  display: flex;
+  gap: 22px;
+  width: 100%;
+  margin: 0;
+  transition: transform 1.2s cubic-bezier(.25, .1, .25, 1);
+  will-change: transform;
+}
+
+.welcome-product-slide,
+.welcome-product-slide.is-active,
+.welcome-product-slide.is-hidden {
+  display: block;
+  flex: 0 0 calc((100% - 44px) / 3);
+  min-width: 0;
+  animation: none;
+}
+
+@media (max-width: 768px) {
+  .welcome-slideshow-track {
+    gap: 10px;
+  }
+
+  .welcome-product-slide,
+  .welcome-product-slide.is-active,
+  .welcome-product-slide.is-hidden {
+    flex-basis: calc((100% - 20px) / 3);
+  }
+}
+
+@media (max-width: 540px) {
+  .welcome-slideshow-track {
+    max-width: none;
+    margin: 0;
+  }
+
+  .welcome-product-slide,
+  .welcome-product-slide.is-active,
+  .welcome-product-slide.is-hidden {
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-slideshow-track {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   WELCOME NAVIGATION — ARTWORK OVERLAY
+   ========================================= */
+
+.welcome-hero {
+  position: relative;
+}
+
+.welcome-header {
+  position: absolute;
+  top: 4.5%;
+  right: 28%;
+  left: auto;
+  width: auto;
+  z-index: 20;
+}
+
+.welcome-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 30px);
+}
+
+.welcome-navigation a {
+  position: relative;
+  color: #667c60;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 0.9vw, 13px);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.welcome-navigation a:hover {
+  color: #b98d8b;
+}
+
+.welcome-navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #b98d8b;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.welcome-navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.welcome-navigation a:focus-visible {
+  outline: 2px solid #667c60;
+  outline-offset: 5px;
+}
+
+/* Smaller screens */
+
+@media (max-width: 768px) {
+  .welcome-header {
+    top: 2%;
+    right: 3%;
+    max-width: 68%;
+  }
+
+  .welcome-navigation {
+    gap: 8px 14px;
+  }
+
+  .welcome-navigation a {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+/* =========================================
+   COLLECTION PORTALS — CLICKABLE ARTWORK
+   ========================================= */
+
+.welcome-collection-link {
+  position: absolute;
+  display: block;
+  z-index: 15;
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.welcome-collection-link:focus-visible {
+  outline: 3px solid #62765d;
+  outline-offset: 3px;
+}
+
+/* Children's collection — green panel */
+
+.welcome-kids-link {
+  left: 29.2%;
+  top: 50.5%;
+  width: 20.2%;
+  height: 28.5%;
+}
+
+
+/* =========================================
+   TRAVEL COLLECTION — CLICKABLE PORTAL
+   ========================================= */
+
+.welcome-travel-link {
+  left: 51%;
+  top: 50.5%;
+  width: 19.8%;
+  height: 28.8%;
+}
+
+/* =========================================
+   KENZIEPRINTS — TRAVEL COMING SOON
+   ========================================= */
+
+.welcome-coming-soon[hidden] {
+  display: none !important;
+}
+
+.welcome-coming-soon {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(48, 43, 40, 0.48);
+  backdrop-filter: blur(5px);
+}
+
+.welcome-coming-soon-card {
+  position: relative;
+  width: min(100%, 480px);
+  padding: 55px 40px 45px;
+  border: 1px solid #e5d7cd;
+  border-radius: 18px;
+  background: #faf6ef;
+  box-shadow: 0 24px 70px rgba(49, 39, 33, 0.18);
+  text-align: center;
+}
+
+.welcome-coming-soon-kicker {
+  margin: 0 0 18px;
+  color: #87947e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.welcome-coming-soon-card h2 {
+  margin: 0 0 20px;
+  color: #8d706b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.welcome-coming-soon-card > p:not(.welcome-coming-soon-kicker) {
+  margin: 0 auto 26px;
+  max-width: 350px;
+  color: #746c65;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.welcome-coming-soon-signature {
+  display: block;
+  color: #8b9a84;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.welcome-coming-soon-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #8d706b;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.welcome-coming-soon-close:hover {
+  color: #566e58;
+}
+
+.welcome-coming-soon-close:focus-visible {
+  outline: 2px solid #566e58;
+  outline-offset: 4px;
+}
+
+@media (max-width: 540px) {
+  .welcome-coming-soon-card {
+    padding: 48px 25px 35px;
+  }
+}
+
+
+/* =========================================
+   KENZIEPRINTS — COLLECTION PORTAL BUTTONS
+   ========================================= */
+
+.welcome-collection-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 8px 0;
+  text-decoration: none;
+}
+
+.welcome-portal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  max-width: 100%;
+  padding: 6px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+
+  background: rgba(255, 253, 249, 0.94);
+  box-shadow: 0 4px 15px rgba(65, 54, 45, 0.12);
+
+  color: #64775e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(8px, 0.75vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Travel Collection button */
+
+.welcome-travel-link .welcome-portal-button {
+  color: #95736f;
+}
+
+/* Gentle hover animation */
+
+.welcome-collection-link:hover .welcome-portal-button {
+  transform: translateY(-3px);
+  background: #ffffff;
+  box-shadow: 0 7px 20px rgba(65, 54, 45, 0.17);
+}
+
+.welcome-portal-button span {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.welcome-collection-link:hover .welcome-portal-button span {
+  transform: translateX(3px);
+}
+
+/* Smaller screens */
+
+@media (max-width: 768px) {
+  .welcome-collection-link {
+    padding: 0 4px 6px;
+  }
+
+  .welcome-portal-button {
+    padding: 6px 8px;
+    gap: 4px;
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .welcome-portal-button span {
+    font-size: 12px;
+  }
+}
+
+
+/* Fine-tune Children's Collection button only */
+
+.welcome-kids-link .welcome-portal-button {
+  transform: translateY(5px);
+}
+
+.welcome-kids-link:hover .welcome-portal-button {
+  transform: translateY(2px);
+}
+
+/* Fine-tune Travel Collection button only */
+
+.welcome-travel-link .welcome-portal-button {
+  transform: translateY(1px);
+}
+
+.welcome-travel-link:hover .welcome-portal-button {
+  transform: translateY(2px);
+}
+
+/* =========================================
+   OUR COLLECTIONS — SCROLL TARGET
+   ========================================= */
+
+.welcome-collections-anchor {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   KENZIEPRINTS — CEO APPROVED MOBILE ARTWORK
+   Desktop design remains unchanged
+   ========================================= */
+
+/* Desktop: hide the mobile artwork */
+.welcome-hero-artwork-mobile {
+  display: none;
+}
+
+/* Mobile: show portrait artwork */
+@media (max-width: 768px) {
+
+  .welcome-hero-artwork {
+    display: none;
+  }
+
+  .welcome-hero-artwork-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* =========================================
+   MOBILE COLLECTION PORTAL ALIGNMENT
+   Desktop remains unchanged
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Children's Collection — green panel */
+  .welcome-kids-link {
+    left: 12.5%;
+    top: 59%;
+    width: 75%;
+    height: 13.5%;
+  }
+
+  /* Travel Collection — dusty rose panel */
+  .welcome-travel-link {
+    left: 12.5%;
+    top: 73%;
+    width: 75%;
+    height: 13.5%;
+  }
+
+  /* Artwork already includes circular arrows */
+  .welcome-collection-link .welcome-portal-button {
+    display: none;
+  }
+
+}
+
+/* =========================================
+   KENZIEPRINTS — MOBILE NAVIGATION
+   Desktop remains unchanged
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .welcome-header {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    padding: 15px 12px;
+    background: #f8f4eb;
+    border-bottom: 1px solid #e8ded5;
+  }
+
+  .welcome-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .welcome-navigation a {
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    color: #667c60;
+  }
+
+}
+
+/* =========================================
+   KENZIEPRINTS — RESPONSIVE PORTAL FIX
+   Keep clickable areas attached to artwork
+   ========================================= */
+
+.welcome-artwork-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Mobile artwork and portal alignment */
+@media (max-width: 768px) {
+
+  .welcome-artwork-container {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Children's Collection — upper green panel */
+  .welcome-kids-link {
+    left: 12.5%;
+    top: 59%;
+    width: 75%;
+    height: 13.5%;
+  }
+
+  /* Travel Collection — lower rose panel */
+  .welcome-travel-link {
+    left: 12.5%;
+    top: 73%;
+    width: 75%;
+    height: 13.5%;
+  }
+
+  /* Buttons already appear in the artwork */
+  .welcome-collection-link .welcome-portal-button {
+    display: none;
+  }
+
+}
+
