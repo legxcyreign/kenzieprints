@@ -474,14 +474,29 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
   renderSummaryPage();
   updateCartLink();
+
+  // Open the shopping cart when returning from another page.
+  if (
+    window.location.hash === "#cart" &&
+    document.getElementById("cart-drawer")
+  ) {
+    openCartDrawer();
+  }
   setupPersonalizationCards();
   setupEasterPreview();
   setupBabyThemeCards();
 
-  document.getElementById("cart-link")?.addEventListener("click", (e) => {
+document.getElementById("cart-link")?.addEventListener("click", (e) => {
+  const drawer = document.getElementById("cart-drawer");
+
+  // If this page has a cart drawer, open it normally.
+  if (drawer) {
     e.preventDefault();
     openCartDrawer();
-  });
+  }
+
+  // Otherwise, allow the link to navigate to kids.html#cart.
+});
 
   document.getElementById("cart-drawer-overlay")?.addEventListener("click", closeCartDrawer);
 

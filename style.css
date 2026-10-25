@@ -8482,3 +8482,49 @@ img {
   }
 
 }
+
+/* ==========================================
+   CHILDREN'S COLLECTION — MAIN SITE RETURN
+========================================== */
+
+.kids-brand-return {
+  width: 100%;
+  padding: 9px 20px;
+  box-sizing: border-box;
+  background: #f8f4eb;
+  border-bottom: 1px solid #e8ded5;
+  text-align: left;
+}
+
+.kids-brand-return a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #71846c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.kids-brand-return a:hover {
+  color: #455c42;
+  text-decoration: underline;
+}
+
+.kids-brand-return a:focus-visible {
+  outline: 2px solid #71846c;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .kids-brand-return {
+    padding: 10px 14px;
+  }
+
+  .kids-brand-return a {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+}
